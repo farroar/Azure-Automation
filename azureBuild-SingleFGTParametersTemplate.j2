@@ -1,0 +1,74 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "{{ location }}"
+          },
+          "vnetSubscription": {
+            "value": "{{ vnetSubscription }}"
+          },
+          "adminUsername": {
+            "value": "{{ adminUsername }}"
+          },
+          "adminPassword": {
+            "value": "{{ adminPassword }}"
+          },
+          "FortiGateNamePrefix": {
+            "value": "{{ FortiGateNamePrefix }}"
+          },
+          "FortiGateImageSKU": {
+            "value": "{{ FortiGateImageSKU }}"
+          },
+          "FortiGateVersion": {
+            "value": "{{ FortiGateVersion }}"
+          },
+          "instanceType": {
+            "value": "{{ instanceType }}"
+          },
+          "publicIPAddressName": {
+            "value": "{{ publicIPAddressName }}"
+          },
+          "publicIPAddressResourceGroup": {
+            "value": "{{ publicIPAddressResourceGroup }}"
+          },
+          "publicIPAddressType": {
+            "value": "{{ publicIPAddressType }}"
+          },
+          "vnetNewOrExisting": {
+            "value": "{{ vnetNewOrExisting }}"
+          },
+          "vnetName": {
+            "value": "{{ vnetName }}"
+          },
+          "vnetResourceGroup": {
+            "value": "{{ vnetResourceGroup }}"
+          },
+          "vnetAddressPrefix": {
+            "value": "{{ vnetAddressPrefix }}"
+          },
+          "Subnet1Name": {
+            "value": "{{ Subnet1Name }}"
+          },
+          "Subnet1Prefix": {
+            "value": "{{ Subnet1Prefix }}"
+          },
+          "Subnet2Name": {
+            "value": "{{ Subnet2Name }}"
+          },
+          "Subnet2Prefix": {
+            "value": "{{ Subnet2Prefix }}"
+          },
+          "insideIPSubnet2": {
+            "value": "{{ insideIPSubnet2 }}"
+          },
+          "FortinetTags": {
+          "value": {
+            "provider": "6EB3B02F-50E5-4A3E-8CB8-2E129258317D"
+            }
+          },
+          "artifactsBaseUrl": {
+            "value": "https://raw.githubusercontent.com/farroar/automatica/master"
+          }
+    }
+}

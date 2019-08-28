@@ -1,0 +1,5 @@
+﻿subscriptionId,vnetName,vnetPrefix,subnetOneName,subnetOnePrefix,subnetTwoName,subnetTwoPrefix,subnetThreeName,subnetThreePrefix,location,orgName
+9952dabc-d042-44ef-bf26-41585cdf2b45,prod,10.30.0.0/21,presentation,10.30.0.0/24,logic,10.30.1.0/24,data,10.30.2.0/24,eastus,drc
+821ac977-7e9a-4bf3-afb0-8016fd109146,sharedServices,10.30.8.0/21,presentation,10.30.8.0/24,logic,10.30.9.0/24,data,10.30.10.0/24,eastus,drc
+8be1cada-05a6-45d1-8550-82066ed26d65,security,10.30.16.0/21,presentation,10.30.16.0/24,logic,10.30.17.0/24,data,10.30.18.0/24,eastus,drc
+413c22a5-dad1-4271-aeef-eb22ca7eecd4,dev,10.30.24.0/21,presentation,10.30.24.0/24,logic,10.30.25.0/24,data,10.30.26.0/24,eastus,drc

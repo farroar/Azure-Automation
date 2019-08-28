@@ -1,0 +1,9 @@
+﻿localVnetName,localVnetPrefix,remoteVnetName,remoteVnetPrefix,localVnetSubscription,remoteVnetSubscription,vnetPeeringName,localVnetResourceGroup,remoteVnetResourceGroup,orgName,location
+edge,10.30.255.0/24,prod,10.30.0.0/21,a3b109fd-70d6-433a-a0c7-64af1114543f,9952dabc-d042-44ef-bf26-41585cdf2b45,peering1,drc-edge-rg,prod-network-rg,drc,eastus
+edge,10.30.255.0/24,sharedServices,10.30.8.0/21,a3b109fd-70d6-433a-a0c7-64af1114543f,821ac977-7e9a-4bf3-afb0-8016fd109146,peering1,drc-edge-rg,sharedServices-network-rg,drc,eastus
+edge,10.30.255.0/24,security,10.30.16.0/21,a3b109fd-70d6-433a-a0c7-64af1114543f,8be1cada-05a6-45d1-8550-82066ed26d65,peering1,drc-edge-rg,security-network-rg,drc,eastus
+edge,10.30.255.0/24,dev,10.30.24.0/21,a3b109fd-70d6-433a-a0c7-64af1114543f,413c22a5-dad1-4271-aeef-eb22ca7eecd4,peering1,drc-edge-rg,dev-network-rg,drc,eastus
+prod,10.30.0.0/21,edge,10.30.255.0/24,9952dabc-d042-44ef-bf26-41585cdf2b45,a3b109fd-70d6-433a-a0c7-64af1114543f,peering1,prod-network-rg,drc-edge-rg,drc,eastus
+sharedServices,10.30.8.0/21,edge,10.30.255.0/24,821ac977-7e9a-4bf3-afb0-8016fd109146,a3b109fd-70d6-433a-a0c7-64af1114543f,peering1,sharedServices-network-rg,drc-edge-rg,drc,eastus
+security,10.30.16.0/21,edge,10.30.255.0/24,8be1cada-05a6-45d1-8550-82066ed26d65,a3b109fd-70d6-433a-a0c7-64af1114543f,peering1,security-network-rg,drc-edge-rg,drc,eastus
+dev,10.30.24.0/21,edge,10.30.255.0/24,413c22a5-dad1-4271-aeef-eb22ca7eecd4,a3b109fd-70d6-433a-a0c7-64af1114543f,peering1,dev-network-rg,drc-edge-rg,drc,eastus
