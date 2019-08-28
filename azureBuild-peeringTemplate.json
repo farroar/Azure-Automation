@@ -1,0 +1,56 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "localVnetName": {
+            "defaultValue": "localvnetname",
+            "type": "string"
+        },
+        "remoteVnetPrefix": {
+            "defaultValue": "10.2.0.0/16",
+            "type": "string"
+        },
+        "remoteVnetSubscriptionId": {
+            "defaultValue": "1",
+            "type": "string"
+        },
+        "remoteVnetResourceGroup": {
+            "defaultValue": "vnetPeering",
+            "type": "string"
+        },
+        "remoteVnetName": {
+            "defaultValue": "org",
+            "type": "string"
+        },
+        "orgName": {
+            "defaultValue": "md",
+            "type": "string"
+        }
+    },
+    "variables": {
+        "remoteVnetExternalId": "[concat('/subscriptions/', parameters('remoteVnetSubscriptionId'), '/resourceGroups/', parameters('remoteVnetResourceGroup'), '/providers/Microsoft.Network/virtualNetworks/', parameters('orgName'), '-', parameters('remoteVnetName'), '-vnet')]",
+        "localVnet": "[concat(parameters('orgName'), '-', parameters('localVnetName'), '-vnet')]",
+        "peeringName": "[concat(parameters('localVnetName'), '-to-', parameters('remoteVnetName'), '-peering')]"
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
+            "apiVersion": "2019-06-01",
+            "name": "[concat(variables('localVnet'), '/', variables('peeringName'))]",
+            "properties": {
+                "remoteVirtualNetwork": {
+                    "id": "[variables('remoteVnetExternalId')]"
+                },
+                "allowVirtualNetworkAccess": true,
+                "allowForwardedTraffic": false,
+                "allowGatewayTransit": false,
+                "useRemoteGateways": false,
+                "remoteAddressSpace": {
+                    "addressPrefixes": [
+                        "[parameters('remoteVnetPrefix')]"
+                    ]
+                }
+            }
+        }
+    ]
+}
